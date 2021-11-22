@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Frontend Mentor | Todo app</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="body-lg grid" id="body">
+    <div class="todobody grid">
+        <header class="flex" style="justify-content: space-between;">
+            <h1 style="color : white">TO DO</h1>
+            <div>
+                <input type="checkbox" class="light-switch" id="switch" onclick="toggle()">
+                <label for="switch"><img id="display" src ="images/icon-sun.svg" onclick="toggle()"><span class="sr-only">Light-Swicth</span></label>
+            </div>
+        </header>
+        <div class="flex white-bg container center addbar" style=" gap: 1rem;border-radius: 6px;">
+            <div class="round">
+                <input type="checkbox" id="checkbox" onclick="addlist()" />
+                <label for="checkbox"></label>
+            </div>
+            <input class="search-bar fs-400 white-bg ff-black" type="text" id="content" placeholder="Create a new todo..." style="margin-top: 0.5rem;" value="">
+        </div>
+        <main class="grid shadow-lg" id="main">
+            <div id="list-item" class="list-item" class="grid" style="gap : 0.2rem">
+                <!--  Test Purpose               
+                <div class="flex white-bg container task center" id="container-1" style="gap: 1.5rem;">
+                    <div class="round">
+                        <input type="checkbox" id="1" checked onclick="checkTask('1')" />
+                        <label for="2"></label>
+                    </div>
+                    <label class="ff-line fs-400 ff-black ff-opacity" for="1" id="text-1" onclick="checkTask('1')" style="margin-top: 0.5rem;">Completed online JavaScript course</label>
+                    <a href="#" class="cross-btn" style="margin-top: 0.5rem;" onclick="removeList('1')"><img src="images/icon-cross.svg"></a>
+                </div>
+
+                <div class="flex white-bg container task center" id="container-2" style="gap: 1.5rem;">
+                    <div class="round">
+                        <input type="checkbox" id="2" checked onclick="checkTask('2')" />
+                        <label for="2"></label>
+                    </div>
+                    <label class="ff-line fs-400 ff-black ff-opacity" for="2" id="text-2" onclick="checkTask('2')" style="margin-top: 0.5rem;">Completed online JavaScript course</label>
+                    <a href="#" class="cross-btn" style="margin-top: 0.5rem;" onclick="removeList('2')"><img src="images/icon-cross.svg "></a>
+                </div> -->
+            </div>
+            <div class="flex white-bg container task-manage shadow-lg attach" style="gap: 1rem; border-radius: 0px 0px 9px 9px;">
+                <p class="ff-black ff-opacity choice" id="count">0 item left</p>
+                <div class="sort flex ">
+                    <a href="#" class="ff-black ff-opacity bold choice" aria-checked="true" id="all" onclick="All()">All</a>
+                    <a href="#" class="ff-black ff-opacity bold choice" aria-checked="false" id="active" onclick="active()">Active</a>
+                    <a href="#" class="ff-black ff-opacity bold choice" aria-checked="false" id="complete" onclick="completed() ">Completed</a>
+                </div>
+                <a href="#" class="ff-black ff-opacity bold choice" onclick="clearComplete()">Clear Completed</a>
+            </div>
+        </main>
+        <div class=" flex white-bg container task-manage shadow-lg flow" style="gap: 1rem; border-radius: 10px;">
+            <p class="ff-black ff-opacity choice " id="countfl">0 item left</p>
+            <div class="sort flex ">
+                <a href="# " class="ff-black ff-opacity bold choice " aria-checked="true" id="allfl" onclick="All()">All</a>
+                <a href="# " class="ff-black ff-opacity bold choice " aria-checked="false" id="activefl" onclick="active()">Active</a>
+                <a href=" # " class="ff-black ff-opacity bold choice " aria-checked="false" id="completefl" onclick="completed() ">Completed</a>
+            </div>
+            <a href="# " class="ff-black ff-opacity bold choice " onclick="clearComplete()">Clear Completed</a>
+        </div>
+        <footer>
+            <p class="ff-black ff-opacity  " style="text-align: center;font-weight: 700; ">Drag and drop to reorder list</p>
+        </footer>
+    </div>
+    <script src="App.js">
+    </script>
+</body>
+
+</html>

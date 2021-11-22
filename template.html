@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Template</title>
+</head>
+
+<body style="background-color : #C2FFF9">
+    <h1 class="fs-700">TO DO TEMPLATE</h1>
+    <h1 class=""><span>01</span> Font</h1>
+    <section>
+        <p class="fs-400">normal text</p>
+        <p class="fs-400 ff-opacity">opacity low text</p>
+        <p class="fs-400 ff-opacity ff-line">Completed text</p>
+        <input type="checkbox" class="light-switch" id="switch">
+        <label for="switch"><img id="display" onclick="toggle()"><span class="sr-only">Light-Swicth</span></label>
+
+    </section>
+    <h1><span>02</span> Component</h1>
+    <section>
+        <div class="grid" style="gap : 0.2rem">
+            <div class="flex white-bg container center" style="margin: 0 auto; gap: 1rem;border-radius: 6px;">
+                <div class="round">
+                    <input type="checkbox" disabled id="checkbox" />
+                    <label for="checkbox"></label>
+                </div>
+                <input class="search-bar fs-400 white-bg ff-black" type="text" placeholder="Create a new todo..." style="margin-top: 0.5rem;">
+            </div>
+
+            <div class="flex white-bg container task center" style="margin: 0 auto; gap: 1.5rem;">
+                <div class="round">
+                    <input type="checkbox" id="1" onclick="checkTask('1')" />
+                    <label for="1"></label>
+                </div>
+                <label class="fs-400 ff-black" for="1" id="text-1" onclick="checkTask('1')" style="margin-top: 0.5rem;">Complete online JavaScript course</label>
+                <a href="#" class="cross-btn" style="margin-top: 0.5rem;"><img class="ff-white" src="images/icon-cross.svg"></a>
+            </div>
+
+            <div class="flex white-bg container task center" style="margin: 0 auto; gap: 1.5rem;">
+                <div class="round">
+                    <input type="checkbox" id="2" checked onclick="checkTask('2')" />
+                    <label for="2"></label>
+                </div>
+                <label class="ff-line fs-400 ff-black ff-opacity" for="2" id="text-2" onclick="checkTask('2')" style="margin-top: 0.5rem;">Completed online JavaScript course</label>
+                <a href="#" class="cross-btn" style="margin-top: 0.5rem;"><img src="images/icon-cross.svg"></a>
+            </div>
+
+            <div class="flex white-bg container task-manage" style="margin: 0 auto; gap: 1rem;">
+                <p class="ff-black ff-opacity">2 item left</p>
+                <div class="sort flex">
+                    <a href="#" class="ff-black ff-opacity bold choice" aria-checked="true">All</a>
+                    <a href="#" class="ff-black ff-opacity bold choice" aria-checked="false">Active</a>
+                    <a href="#" class="ff-black ff-opacity bold choice" aria-checked="false">Completed</a>
+                </div>
+                <a href="#" class="ff-black ff-opacity bold">Clear Completed</a>
+            </div>
+        </div>
+    </section>
+    <script src="App.js"></script>
+</body>
+
+</html>
